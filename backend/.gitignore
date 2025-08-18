@@ -1,0 +1,13 @@
+.DS_Store
+.idea
+# ----   gitignore
+*.pyc
+log
+migrations
+models/**/*.json
+resources/**/*.json
+run
+swagger
+swagger-ui
+venv
+config/config.py

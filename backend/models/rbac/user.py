@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
-from sqlalchemy import or_
-from werkzeug.security import check_password_hash
+from werkzeug.security import check_password_hash, generate_password_hash
 from models.base_model import BaseIdModel, BaseTimeModel
-
 from manage import db
 
 
@@ -13,15 +11,14 @@ class User(BaseIdModel, BaseTimeModel):
     nick_name = db.Column(db.String(255), nullable=True, comment='用户昵称')
     user_mobile = db.Column(db.String(128), nullable=False, comment='用户电话号码')
     user_email = db.Column(db.String(128), nullable=True, comment='用户电子邮箱')
-    user_origin = db.Column(db.String(255), nullable=True, comment='用户注册来源')
-    is_active = db.Column(db.Boolean(), default=False, comment='是否激活')
 
     @staticmethod
-    def is_user_exist(username):
+    def is_user_exist(username=None):
         """
-            # 检测用户是否存在
+            # 检测用户是否注册/存在
         :return:
         """
+
         user = User.query.filter(
             User.username == username,
         ).first()
@@ -38,9 +35,9 @@ class User(BaseIdModel, BaseTimeModel):
         :return:
         """
         # 查找用户
-        user = User.query.filter(or_(
+        user = User.query.filter(
             User.username == username,
-        )).first()
+        ).first()
         if user is None:
             return False  # 用户不存在
 

@@ -2,6 +2,8 @@
 import datetime
 import enum
 
+from flask_sqlalchemy.query import Query
+
 from manage import db
 
 

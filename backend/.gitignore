@@ -1,6 +1,6 @@
 .DS_Store
 .idea
-# ----   gitignore
+lib/celery/settings.py
 *.pyc
 log
 migrations
@@ -11,3 +11,4 @@ swagger
 swagger-ui
 venv
 config/config.py
+my_celery/config.py

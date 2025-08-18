@@ -1,7 +1,6 @@
-# -*-coding:utf-8-*-
-from resources import user_manage
-
+# -*- coding: utf-8 -*-
+from resources import rbac_manage
 
 
 def load(app):
-    user_manage.load(app)
+    rbac_manage.load(app)

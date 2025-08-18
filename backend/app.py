@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from flask.cli import click, with_appcontext
+from flask.cli import with_appcontext
+from werkzeug.security import generate_password_hash
 
 from manage import create_app, db
 
@@ -19,7 +20,7 @@ def init_db():
     else:
         user = User()
         user.username = "superadmin"
-        user.password = "qwer1234"
+        user.password = generate_password_hash("qwer1234")
         user.user_mobile = "17600000000"
         user.user_email = "17600000000@qq.com"
         user.nick_name = "超级管理员"

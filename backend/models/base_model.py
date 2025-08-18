@@ -162,7 +162,7 @@ class BaseIdModel(BaseModel):
 class BaseTimeModel(BaseModel):
     __abstract__ = True
 
-    create_record_time = db.Column(db.DateTime, default=get_now_datetime, comment='记录创建时间')  # 创建时间
-    update_record_time = db.Column(db.DateTime, default=get_now_datetime, onupdate=get_now_datetime,
-                                   comment='记录更新时间')  # 更新时间
-    delete_record_time = db.Column(db.DateTime, default=get_now_datetime, comment='记录删除时间')  # 删除时间
+    create_time = db.Column(db.DateTime, default=get_now_datetime, comment='记录创建时间')  # 创建时间
+    update_time = db.Column(db.DateTime, default=get_now_datetime, onupdate=get_now_datetime,
+                            comment='记录更新时间')  # 更新时间
+    delete_time = db.Column(db.DateTime, nullable=True, comment='记录删除时间')  # 删除时间

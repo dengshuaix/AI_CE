@@ -1,6 +1,7 @@
-# -*-coding:utf-8-*-
+# -*- coding: utf-8 -*-
 from flask import Flask
 from flask_caching import Cache
+from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_redis import FlaskRedis
 from flask_sqlalchemy import SQLAlchemy
@@ -27,6 +28,7 @@ def create_app():
     app = Flask(__name__)
 
     app.config.from_pyfile(os.path.join(app.root_path, 'config', 'config.py'))
+    CORS(app, supports_credentials=True)  # 允许跨域携带凭证
 
     # 初始化数据库
     db.init_app(app)

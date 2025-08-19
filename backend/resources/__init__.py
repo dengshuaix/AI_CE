@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from resources import rbac_manage
+from resources.rbac_manage import auth_manage
 
 
 def load(app):
-    rbac_manage.load(app)
+    auth_manage.load(app)

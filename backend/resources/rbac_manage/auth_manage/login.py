@@ -1,8 +1,5 @@
-# -*-coding:utf-8-*-
-import json
-
-# 登陆
 # -*- coding: utf-8 -*-
+import json
 from flask import jsonify
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity, create_refresh_token
 from flask_restful import Resource, reqparse, abort
@@ -47,7 +44,7 @@ class UserLoginResource(Resource):
         }
 
         return jsonify({
-            "code": 201,
+            "code": 200,
             "data": login_info,
             "message": "登录成功!"
         })

@@ -1,0 +1,1 @@
+uwsgi --stop log/api.pid

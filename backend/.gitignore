@@ -12,3 +12,4 @@ swagger-ui
 venv
 config/config.py
 my_celery/config.py
+uwsgi.ini

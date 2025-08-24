@@ -1,0 +1,113 @@
+/* Hero组件样式 */
+
+/* Hero 区域基础样式 */
+.hero {
+  width: 100vw;
+  height: 480px;
+  color: white;
+  background-size: cover; /* 覆盖整个容器，保持比例 */
+  background-position: center; /* 背景居中 */
+  background-repeat: no-repeat; /* 不重复 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* 背景遮罩层，确保文字清晰可见 */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.hero__content {
+  width: 100%;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2; /* 确保内容在遮罩层之上 */
+  margin-left: 100px;
+}
+
+.hero__text {
+  /* 文本内容容器 */
+}
+
+.hero__title {
+  color: #262A38;
+  font-family: "PingFang SC";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.hero__subtitle {
+  color: #2B2E3C;
+  font-family: "PingFang SC";
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 10px 0;
+}
+
+.hero__description {
+  color: #94A0B8;
+  font-family: "PingFang SC";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hero {
+    height: 360px;
+  }
+  
+  .hero__content {
+    margin-left: 24px;
+    padding: 0 16px;
+  }
+  
+  .hero__title {
+    font-size: 32px;
+  }
+  
+  .hero__subtitle {
+    font-size: 36px;
+  }
+  
+  .hero__description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 300px;
+  }
+  
+  .hero__content {
+    margin-left: 16px;
+    padding: 0 12px;
+  }
+  
+  .hero__title {
+    font-size: 28px;
+  }
+  
+  .hero__subtitle {
+    font-size: 30px;
+  }
+  
+  .hero__description {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,547 @@
+/* 教师Tab组件样式 */
+.teacher-tab-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 顶部Tab导航 */
+.teacher-tab-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 32px;
+}
+
+.teacher-tab-navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px;
+  border-radius: 30px;
+  background: #E5EBF7;
+}
+
+.teacher-tab-nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 32px;
+  background: transparent;
+  color: #1E253B;
+  transition: all 0.3s ease;
+}
+
+.teacher-tab-nav-button:hover {
+  color: #667eea;
+  transform: translateY(-2px);
+  border: none;
+}
+
+.teacher-tab-nav-button.teacher-tab-active {
+  color: #fff;
+  border-radius: 30px;
+  background: linear-gradient(270deg, #A143FF 0%, #6B69FF 50%, #7BA7FF 100%), #202534;
+}
+
+.teacher-tab-nav-button.teacher-tab-active .teacher-tab-icon img {
+  filter: brightness(0) invert(1);
+}
+
+.teacher-tab-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.teacher-tab-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.teacher-tab-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4px;
+}
+
+.teacher-tab-separator img {
+  width: 32px;
+  height: 16px;
+  object-fit: contain;
+  opacity: 0.6;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 12px;
+}
+
+/* 主要内容区域 */
+.teacher-tab-content {
+  display: flex;
+  height: 540px;
+  width: 100%;
+}
+
+/* 左侧二级菜单面板 */
+.teacher-sub-menu-panel {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 24px 24px 50px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.teacher-sub-menu-header {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+}
+
+.teacher-sub-menu-title {
+  color: #1E253B;
+  font-family: "PingFang SC";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-left: 6px;
+}
+
+.teacher-sub-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+  width: 80%;
+  align-self: flex-start;
+}
+
+.teacher-sub-menu-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.teacher-sub-menu-item:hover,
+.teacher-sub-menu-item.teacher-sub-menu-active,
+.teacher-sub-menu-item.teacher-sub-menu-hover {
+  transform: translateY(-2px);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #FFF;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.80) 3.64%, rgba(249, 250, 251, 0.50) 91.82%);
+  box-shadow: 0 4px 16px 0 rgba(207, 204, 204, 0.30);
+  backdrop-filter: blur(5px);
+}
+
+/* 确保hover状态优先级更高 */
+.teacher-sub-menu-item.teacher-sub-menu-hover {
+  border: 1px solid #FFF !important;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.80) 3.64%, rgba(249, 250, 251, 0.50) 91.82%) !important;
+  box-shadow: 0 4px 16px 0 rgba(207, 204, 204, 0.30) !important;
+  backdrop-filter: blur(5px) !important;
+  transform: translateY(-2px) !important;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.teacher-sub-menu-item:hover .teacher-sub-menu-name,
+.teacher-sub-menu-item.teacher-sub-menu-active .teacher-sub-menu-name,
+.teacher-sub-menu-item.teacher-sub-menu-hover .teacher-sub-menu-name {
+  color: #6D28D9;
+  font-family: "PingFang SC";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.teacher-sub-menu-icon {
+  height: 28px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  color: #333;
+  border-radius: 12px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.teacher-sub-menu-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.teacher-sub-menu-item:hover .teacher-sub-menu-icon img,
+.teacher-sub-menu-item.teacher-sub-menu-active .teacher-sub-menu-icon img,
+.teacher-sub-menu-item.teacher-sub-menu-hover .teacher-sub-menu-icon img {
+  filter: none; /* 保持图标原色 */
+}
+
+.teacher-sub-menu-content {
+  flex: 1;
+  width: 100%;
+}
+
+.teacher-sub-menu-name {
+  height: 28px;
+  line-height: 28px;
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+  align-items: center;
+  gap: 8px;
+}
+
+.teacher-sub-menu-description {
+  font-size: 14px;
+  color: #6c757d;
+  line-height: 1.5;
+  padding: 6px 12px 16px 0;
+  animation: teacherFadeIn 0.3s ease-out;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.teacher-sub-menu-item:hover .teacher-sub-menu-description,
+.teacher-sub-menu-item.teacher-sub-menu-active .teacher-sub-menu-description,
+.teacher-sub-menu-item.teacher-sub-menu-hover .teacher-sub-menu-description {
+  opacity: 1;
+  max-height: 200px;
+  margin: 8px 0 0 0;
+}
+
+/* 功能特点区域 */
+.teacher-features-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e9ecef;
+}
+
+.teacher-features-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.teacher-features-title::before {
+  content: '';
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.teacher-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border: none;
+}
+
+.teacher-feature-icon {
+  color: #667eea;
+  font-size: 16px;
+}
+
+.teacher-feature-text {
+  font-size: 14px;
+  color: #495057;
+  font-weight: 500;
+}
+
+/* 右侧图片展示区域 */
+.teacher-image-panel {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 40px; */
+  position: relative;
+}
+
+/* 去除按钮的默认边框 */
+.teacher-tab-nav-button:focus {
+  outline: none;
+}
+
+/* 添加一些焦点样式（如果需要） */
+.teacher-tab-nav-button:focus-visible {
+  outline: 2px solid #007bff; /* 你可以修改颜色 */
+}
+
+
+.teacher-image-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teacher-image-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); */
+  /* background: #f8f9fa; */
+  /* padding: 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teacher-feature-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.teacher-feature-image:hover {
+  transform: scale(1.02);
+}
+
+/* 操作按钮 */
+.teacher-action-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 80%;
+  align-self: flex-start;
+}
+
+.teacher-primary-action {
+  height: 48px;
+  display: inline-block;
+  padding: 15px 40px; /* 按钮内边距 */
+  border-radius: 8px; /* 圆角 */
+  background-color: #1e1e1e; /* 黑色背景 */
+  color: white; /* 文字颜色 */
+  font-size: 16px; /* 字体大小 */
+  font-weight: bold; /* 字体加粗 */
+  text-align: center;
+  text-decoration: none;
+  border-bottom:10px solid  linear-gradient(270deg, #FFABDE 0%, #7F84FF 100%);; /* 去掉边框 */
+  position: relative; /* 为了定位伪元素 */
+  overflow: hidden; /* 隐藏超出区域 */
+  transition: all 0.3s ease; /* 平滑过渡 */
+}
+
+.teacher-primary-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.teacher-secondary-action {
+  border: 2px solid #667eea;
+  color: #667eea;
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  min-width: 140px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.teacher-secondary-action:hover {
+  background: #667eea;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .teacher-tab-content {
+    height: auto;
+    min-height: 540px;
+  }
+  
+  .teacher-sub-menu-panel {
+    width: 40%;
+    padding: 20px;
+  }
+  
+  .teacher-sub-menu-list {
+    width: 80%;
+  }
+  
+  .teacher-image-panel {
+    width: 60%;
+    /* padding: 20px; */
+  }
+}
+
+@media (max-width: 768px) {
+  .teacher-tab-header {
+    padding: 16px;
+  }
+  
+  .teacher-tab-navigation {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .teacher-tab-nav-button {
+    min-width: 120px;
+    padding: 10px 16px;
+    font-size: 14px;
+    background: transparent;
+  }
+  
+  .teacher-tab-content {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .teacher-sub-menu-panel {
+    width: 100%;
+    padding: 16px;
+    order: 2;
+  }
+  
+  .teacher-sub-menu-list {
+    width: 100%;
+  }
+  
+  .teacher-sub-menu-item {
+    padding: 16px;
+  }
+  
+  .teacher-image-panel {
+    width: 100%;
+    /* padding: 24px 16px; */
+    order: 1;
+    height: 300px;
+  }
+  
+  .teacher-action-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .teacher-primary-action,
+  .teacher-secondary-action {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .teacher-tab-container {
+    border-radius: 8px;
+  }
+  
+  .teacher-tab-nav-button {
+    min-width: 100px;
+    padding: 8px 12px;
+    font-size: 12px;
+    background: transparent;
+  }
+  
+  .teacher-sub-menu-name {
+    display: flex;
+    font-size: 16px;
+  }
+  
+  .teacher-sub-menu-description {
+    font-size: 12px;
+  }
+  
+  .teacher-features-title {
+    font-size: 16px;
+  }
+  
+  .teacher-feature-text {
+    font-size: 12px;
+  }
+  
+  .teacher-image-panel {
+    height: 250px;
+  }
+}
+
+/* 动画效果 */
+@keyframes teacherFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes teacherFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.teacher-sub-menu-item,
+.teacher-image-content {
+  animation: teacherFadeInUp 0.5s ease-out;
+}
+
+/* 滚动条样式 */
+.teacher-sub-menu-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.teacher-sub-menu-panel::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.teacher-sub-menu-panel::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.teacher-sub-menu-panel::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

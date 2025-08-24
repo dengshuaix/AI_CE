@@ -1,0 +1,144 @@
+/* 导航栏样式 */
+.navigation-header {
+  background: rgba(255, 255, 255, 0.95);
+  height: 66px;
+  line-height: 66px;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navigation-header__content {
+  display: flex;
+  padding: 0 24px;
+  height: 66px;
+  align-items: center;
+}
+
+/* Logo 样式 */
+.navigation-logo {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 8px;
+}
+
+.navigation-logo__icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation-logo__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.navigation-logo__text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* 导航菜单 */
+.navigation-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.navigation-item {
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navigation-item:hover {
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.navigation-dropdown {
+  position: relative;
+}
+
+.navigation-arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.navigation-dropdown:hover .navigation-arrow {
+  transform: rotate(180deg);
+}
+
+/* 下拉菜单样式 */
+.ant-dropdown-menu {
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+}
+
+.ant-dropdown-menu-item {
+  padding: 12px 20px;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.ant-dropdown-menu-item:hover {
+  background: rgba(102, 126, 234, 0.05);
+  color: #667eea;
+}
+
+.navigation-login-container {
+  width: 10%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+/* 登录按钮 */
+.navigation-login-btn {
+  background: #202534;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  padding: 8px 24px;
+  height: 36px;
+  transition: all 0.3s ease;
+}
+
+.navigation-login-btn:hover {
+  background: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .navigation-header__content {
+    padding: 0 16px;
+  }
+  
+  .navigation-menu {
+    display: none;
+  }
+  
+  .navigation-item {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}

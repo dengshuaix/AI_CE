@@ -1,0 +1,230 @@
+/* Footer组件样式 */
+.homepage-footer {
+  background: linear-gradient(0deg, #1C1C1C 0%, #1C1C1C 100%), #202534;
+  color: #fff;
+}
+
+.homepage-footer .homepage-container {
+  display: flex;
+  padding: 60px 100px;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.homepage-footer__top {
+  display: flex;
+  padding-bottom: 30px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-bottom: 0.5px solid #525866;
+  width: 100%;
+}
+
+.homepage-footer__left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.homepage-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.homepage-footer__logo-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.homepage-footer__logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.homepage-footer__logo-text {
+  color: #fff;
+  font-family: "PingFang SC";
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.homepage-footer__qr-codes {
+  display: flex;
+  gap: 20px;
+}
+
+.homepage-footer__qr-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+.homepage-footer__qr-item.item-customer {
+    padding-left: 20px;
+}
+
+.homepage-footer__qr-icon {
+  font-size: 24px;
+  color: #fff;
+}
+
+.homepage-footer__qr-item .ant-typography {
+  color: #FFF;
+  font-family: "PingFang SC";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.homepage-footer__nav-menu {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  gap: 60px;
+}
+
+.homepage-footer__nav-menu span {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.homepage-footer__nav-menu span:hover {
+  color: #667eea;
+}
+.homepage-footer__contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* align-items: flex-end; */
+}
+
+.homepage-footer__contact-item {
+  display: flex;
+  /* align-items: center; */
+  gap: 8px;
+  color: #fff;
+}
+.homepage-footer__contact-item .anticon {
+  color: #667eea;
+  font-size: 16px;
+}
+
+.homepage-footer__contact-item .ant-typography {
+  color: #fff;
+  font-family: "PingFang SC";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.homepage-footer__links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.homepage-footer__links a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "PingFang SC";
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.homepage-footer__links a:hover {
+  color: #667eea;
+}
+
+.homepage-footer__copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+  margin-top: 106px;
+}
+
+.homepage-footer__copyright .ant-typography {
+  color: #999;
+  font-family: "PingFang SC";
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.homepage-footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+    height: 108px;
+}
+
+.homepage-footer__qr-codes-left {
+    display: flex;
+}
+
+.homepage-footer__qr-item img{
+    width: 80px;
+    height: 80px;
+}
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .homepage-footer .homepage-container {
+    padding: 40px 60px;
+  }
+  
+  .homepage-footer__nav-menu {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage-footer .homepage-container {
+    padding: 30px 20px;
+  }
+  
+  .homepage-footer__top {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .homepage-footer__nav-menu {
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  
+  .homepage-footer__contact-info {
+    /* align-items: center; */
+  }
+  
+  .homepage-footer__copyright {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage-footer .homepage-container {
+    padding: 20px 15px;
+  }
+  
+  .homepage-footer__nav-menu {
+    gap: 20px;
+  }
+  
+  .homepage-footer__qr-codes {
+    gap: 15px;
+  }
+  
+  .homepage-footer__links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

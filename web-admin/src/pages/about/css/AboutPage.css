@@ -1,0 +1,118 @@
+/* 关于我们页面样式 */
+
+/* 全局样式 */
+.about-portal {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.about-content {
+  /* 内容区域样式 */
+}
+
+/* 容器样式 */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 区域样式 */
+.about-section {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+/* 公司简介区域 */
+.about-company-content {
+  align-items: center;
+}
+
+.about-company__text {
+  padding-right: 24px;
+}
+.about-company__title {
+  color: var(---9-, #1E253B);
+  text-align: left;
+  font-family: "PingFang SC";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.about-company__description {
+  color: var(---5-, #94A0B8);
+  font-family: "PingFang SC";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+.about-company__image {
+  text-align: center;
+}
+
+.about-company__image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 0;
+  }
+  
+  .about-container {
+    padding: 0 16px;
+  }
+  
+  .about-company__title {
+    font-size: 36px;
+  }
+  
+  .about-company__text {
+    padding-right: 0;
+    margin-bottom: 32px;
+  }
+  
+  .about-company__description {
+    font-size: 15px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 40px 0;
+  }
+  
+  .about-container {
+    padding: 0 12px;
+  }
+  
+  .about-company__title {
+    font-size: 28px;
+  }
+  
+  .about-company__description {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  
+  .about-company__image img {
+    border-radius: 8px;
+  }
+}
